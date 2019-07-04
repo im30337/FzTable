@@ -1,4 +1,4 @@
-//variable
+//color variable
 $light-yellow-click-highlight: #fff9e3;
 $orange-table-cheapest: #ff8e26;
 $pink-table-hover: #fe8b88;
@@ -14,7 +14,7 @@ $gray-slider: #d5d5d5;
 .wrapper {
   position: relative;
   height: 400px;
-  max: 100%;
+  width: 100%;
   background-color: #3fa07c;
 }
 .data {
@@ -94,14 +94,17 @@ $gray-slider: #d5d5d5;
   background-color: $light-gray-click-middle-table;
 }
 @media (max-width: 768px) {
-  body {
-    　overflow-y: scroll;
-
-    　overflow-x: hidden;
+  body::-webkit-scrollbar {
+    display: none;
   }
   .wrapper {
     width: 200%;
   }
+  // .right-table {
+  // }
+  // .left-table {
+  //   transform: translateX(200px);
+  // }
   .right-col {
     max-width: 256px;
   }
