@@ -1,0 +1,92 @@
+//variable
+$light-yellow-click-highlight: #fff9e3;
+$orange-table-cheapest: #ff8e26;
+$pink-table-hover: #fe8b88;
+$green-year-font: #3fa07c;
+$dark-gray-upper-table: #eaedf2;
+$light-gray-left-table: #f1f1f1;
+$light-gray-click-middle-table: #f7f7f7;
+$black-day-font: #666666;
+$black-price-number-font: #444444;
+$gray-price-string-font: #999999;
+$gray-slider: #d5d5d5;
+
+.wrapper {
+  height: 400px;
+  max-width: 890px;
+  background-color: #3fa07c;
+}
+.data {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  box-sizing: border-box;
+  height: 50px;
+  border-left: 1px solid #e1e2e4;
+  border-bottom: 1px solid #e1e2e4;
+}
+.left-table {
+  float: left;
+  width: 14.28%;
+  height: fit-content;
+}
+.left-col {
+  @extend .data;
+  background-color: $gray-slider;
+}
+
+.right-table {
+  float: right;
+  width: 85.72%;
+  height: fit-content;
+}
+.right-col {
+  float: left;
+  width: 14.285%;
+}
+.right-col-data {
+  @extend .data;
+  background-color: white;
+}
+.title {
+  padding: 4px;
+  border-left: 1px solid #e1e2e4;
+  background-color: $dark-gray-upper-table;
+  & span:first-child {
+    text-align: right;
+  }
+}
+.day {
+  background-color: $dark-gray-upper-table;
+}
+.cheapest {
+  position: relative;
+  &:before {
+    content: "最便宜";
+    color: #ff8e26;
+    font-size: 12px;
+  }
+  &:after {
+    content: "";
+    height: 0;
+    width: 0;
+    top: 0;
+    left: 0;
+    position: absolute;
+    border-top: 10px solid #ff8e26;
+    border-right: 10px solid transparent;
+    border-bottom: 10px solid transparent;
+    border-left: 10px solid #ff8e26;
+  }
+}
+.click-hightlight {
+  background-color: $light-yellow-click-highlight;
+  border: 1px solid $pink-table-hover;
+}
+.click-hightlight-neighbor {
+  background-color: $light-gray-click-middle-table;
+}
+.last-col-right-border {
+  border-right: 1px solid #e1e2e4;
+}
