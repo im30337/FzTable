@@ -1,5 +1,6 @@
 @charset "UTF-8";
 .wrapper {
+  position: relative;
   height: 400px;
   max-width: 890px;
   background-color: #3fa07c;
@@ -103,5 +104,34 @@
 
 .last-col-right-border {
   border-right: 1px solid #e1e2e4;
+}
+
+@media (max-width: 768px) {
+  .right-table {
+    overflow: hidden;
+  }
+  .right-col {
+    width: 33.333%;
+  }
+  .fas {
+    color: white;
+  }
+  .slide-btn {
+    cursor: pointer;
+    display: block;
+    padding: 13px 3px;
+    line-height: 1;
+    background: rgba(171, 171, 171, 0.5);
+    position: absolute;
+    top: 50%;
+    z-index: 1;
+    color: #fff;
+  }
+  .slide-right {
+    right: 0;
+  }
+  .slide-left {
+    left: 89px;
+  }
 }
 /*# sourceMappingURL=layout.css.map */
