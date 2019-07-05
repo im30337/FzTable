@@ -50,10 +50,16 @@
 .right-col {
   float: left;
   width: 14.285%;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
 }
 
 .right-col-data {
   background-color: white;
+}
+
+.right-col-data:hover {
+  cursor: pointer;
 }
 
 .title {
@@ -97,7 +103,7 @@
   border-right: 1px solid #e1e2e4;
 }
 
-.click-hightlight {
+.click-hightlight, .right-col-data:hover {
   background-color: #fff9e3;
   border: 1px solid #fe8b88;
 }
@@ -107,14 +113,21 @@
 }
 
 @media (max-width: 768px) {
-  body::-webkit-scrollbar {
-    display: none;
-  }
   .wrapper {
-    width: 200%;
+    width: calc((100% / 4 * 7));
+  }
+  .right-table {
+    width: calc(100% - 88px);
+    -webkit-transform: translateX(calc(-100% / 7 * 2));
+            transform: translateX(calc(-100% / 7 * 2));
   }
   .right-col {
-    max-width: 256px;
+    width: calc(100% / 7);
+  }
+  .left-table {
+    position: absolute;
+    z-index: 100;
+    width: 88px;
   }
   .fas {
     color: white;

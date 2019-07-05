@@ -45,10 +45,15 @@ $gray-slider: #d5d5d5;
 .right-col {
   float: left;
   width: 14.285%;
+  box-sizing: border-box;
 }
 .right-col-data {
   @extend .data;
   background-color: white;
+  &:hover {
+    @extend .click-hightlight;
+    cursor: pointer;
+  }
 }
 .title {
   padding: 4px;
@@ -94,20 +99,29 @@ $gray-slider: #d5d5d5;
   background-color: $light-gray-click-middle-table;
 }
 @media (max-width: 768px) {
-  body::-webkit-scrollbar {
-    display: none;
-  }
+  // body::-webkit-scrollbar {
+  //   display: none;
+  // }
   .wrapper {
-    width: 200%;
+    //除以要顯示的行數
+    width: calc((100% / 4 * 7));
   }
-  // .right-table {
-  // }
-  // .left-table {
-  //   transform: translateX(200px);
-  // }
+  .right-table {
+    width: calc(100% - 88px);
+    //乘以一次要移動的行數
+    transform: translateX(calc(-100% / 7 * 2));
+  }
   .right-col {
-    max-width: 256px;
+    width: calc(100% / 7);
   }
+  .left-table {
+    position: absolute;
+    z-index: 100;
+    width: 88px;
+  }
+  // .left-col {
+  //   //transform: translateX(-100px);
+  // }
   //arrow setting
   .fas {
     color: white;
